@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+
+  /* Background gradient: */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+
+  /* Neutral */
+  /* text */
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  padding: 10em 2em 5em;
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+}
+
+.container {
+  background-color: #fff;
+  padding: 0 2em;
+  border-radius: 2em;
+  width: 20rem;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+}
+
+.col-left {
+  position: relative;
+  top: -9em;
+  left: -1em;
+}
+
+.col-right {
+  position: relative;
+  top: -6em;
+}
+
+.women-online {
+  position: relative;
+  z-index: 20;
+}
+
+.bg-pattern {
+  position: absolute;
+  bottom: -1.25em;
+  left: 2.2em;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--Very-dark-grayish-blue);
+  border-bottom: 1px solid var(--Light-grayish-blue);
+  position: relative;
+}
+
+.accordion:hover {
+  color: var(--Soft-red);
+}
+
+.accordion:nth-child(1) {
+  border-top: none;
+}
+
+.accordion span {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  transition: rotate 0.3s;
+}
+
+.accordion.active {
+  border: none;
+  font-size: 1.06em;
+  font-weight: 700;
+  padding-bottom: 0;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.accordion.active + .panel {
+  display: block;
+}
+
+.accordion.active > span {
+  top: 50%;
+}
+
+.accordion.active > span img {
+  transform: rotate(180deg);
+}
+
+.accordion.active ~ .accordion {
+  border-top: 1px solid var(--Light-grayish-blue);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.panel p {
+  color: var(--Dark-grayish-blue);
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    width: 55rem;
+    min-height: 30rem;
+    justify-content: space-between;
+  }
+  .col-left {
+    flex-basis: 50%;
+    top: 6em;
+    left: -6em;
+    position: relative;
+  }
+  .col-left::after {
+    content: url('./images/illustration-box-desktop.svg');
+    position: absolute;
+    top: 7em;
+    transform: scale(1);
+    left: -4em;
+    z-index: 999;
+    animation: float 1.5s infinite alternate-reverse;
+  }
+
+  @keyframes float {
+    from {
+      top: 7em;
+    }
+    to {
+      top: 5em;
+    }
+  }
+
+  .bg-pattern {
+    bottom: 7.75em;
+    left: 0.3em;
+  }
+  .col-right {
+    flex-basis: 50%;
+    top: unset;
+    padding: 5em 5rem 0 0;
+  }
+  .accordion {
+    padding: 18px 18px 18px 0;
+  }
+  .panel {
+    padding: 0;
+  }
+  .title {
+    text-align: left;
+  }
+  .women-online {
+    position: relative;
+    z-index: 10;
+  }
+}
