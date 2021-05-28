@@ -8,8 +8,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://alejobaez.github.io/Frontend-Mentor-FAQ-Accordion-Card/)
 
 ## My process
 
@@ -23,4 +22,4 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Alejobaez](https://www.frontendmentor.io/profile/Alejobaez)
